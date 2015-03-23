@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>Welcome to Anagrams!</h1>
+  <form action="/anagrams" method="get">
+  <input type="text" name="user_input">
+  <input type="submit" value="Say It!">
+</form>
+
+<p>URL parameters:</p>
+<%= params %>
+</div>
+
+<div>
+  <% if @anagrams != nil %>
+    <% @anagrams.each do |word| %>
+    <ul>
+    <li><%=word%></li>
+    </ul>
+    <%end%>
+  <%end%>
+</div>
